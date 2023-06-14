@@ -1,3 +1,3 @@
 import { IAnimal, TAnimalRequest } from "./interfaces";
 
-export const animais:IAnimal[] = []
+export const animals:IAnimal[] = []
