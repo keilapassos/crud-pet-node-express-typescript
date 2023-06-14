@@ -1,0 +1,35 @@
+no .gitignore:
+node_modules
+*lock* // nao mostra os locks/locais
+
+iniciar package json
+npm init -y
+
+instalar biliotecas
+npm install express
+
+npm i -D @types/express ts-node-dev typescript
+* -D para dependência de desenvolvimento
+* ts-node-dev faz o reaload do servidos, como o nodemon
+
+criar arq. de configuração do typescript - tsconfig.json
+npx tsc --init
+
+* podemos apagar o que foi gerado automaticamente e colar
+o conteúdo:
+
+{
+  "compilerOptions": {
+    "target": "es2016", 
+    "module": "commonjs",
+    // "typeRoots": ["src/@types", "node_modules/@types"],
+    "typeRoots": ["node_modules/@types"],
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "exactOptionalPropertyTypes": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/*"],
+  "exclude": ["node_modules"]
+}
